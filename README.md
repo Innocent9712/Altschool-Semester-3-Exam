@@ -31,7 +31,7 @@
 #### Optional - only if you have multiple user profile setup on your machine
 run this command to make sure your user profile is set as the user for your shell environment:
 ```shell
-$   export AWS_PROFILE=\<user name>
+$   export AWS_PROFILE=<user name>
 ```
 
 - cd into  **terraform** directory. checkout the **terraform.tfvars** file and set the "profile" and "AWS_REGION" values to your "aws username" and preferred "region" respectively.
@@ -119,6 +119,11 @@ Once you're done, run `kubectl get pods -A` and you should get something like th
 ![A result of all pods running](./all_pods.png)
 
 
+
+<br>
+<br>
+
+To destroy your infrastructure, you first have to manually destroy your alb from your aws console or using aws cli, along with 2 security groups that were created while bringing up the infrastructure. Then proceed to run `terraform destroy` in the **terraform** directory, and respond `yes` to the prompt. All you resources should be destroyed in a few minutes.
 
 <br>
 <br>
