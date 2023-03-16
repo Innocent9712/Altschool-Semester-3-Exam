@@ -4,7 +4,8 @@
 
 
 ### Prerequisites: 
-make sure ansible is installed and your host machine should be a linux machine, idealy an ubuntu machine.
+- make sure ansible is installed and your host machine should be a linux machine, idealy an ubuntu machine.
+- github PAT
 
 
 ### Steps:
