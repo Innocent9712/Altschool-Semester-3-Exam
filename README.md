@@ -85,9 +85,9 @@ flux bootstrap github \
 ```
 
 clone the repo to your local machine and cd into the repo directory
-cd into `clusters/my-cluster` and put all your source and kustomization manifest files from the [source](./source/) directory in this repo into the `clusters/my-cluster/  directory and push changes. 
+cd into `clusters/my-cluster` and put all your source and kustomization manifest files from the [source](./source/) directory in this repo into the `clusters/my-cluster/  directory of this repo created by flux. 
 
-For the different files in the `source` directory, you would need to fork the repository values of the `url` field and replace the url with your forked repo in files matching `*source*.yaml`.
+For the different files in the `source` directory, you would need to fork the repository values of the `url` field and replace the url with your forked repo in files matching `*source*.yaml`. Save and push changes.
 
 flux would automatically pick these changes and apply the deployments, it will also watch the repository defined in this files, for any change. At which it would update the deployments.
 
