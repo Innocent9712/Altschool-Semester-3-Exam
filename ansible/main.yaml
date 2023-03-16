@@ -1,0 +1,30 @@
+---
+- name: Install kubectl, awscli, helm, eksctl, and flux on linux(Ubuntu) host machine
+  hosts: localhost
+  become: true
+  
+  tasks:
+    - name: Install kubectl
+      apt:
+        name: kubectl
+        state: present
+
+    - name: Install aws cli
+      apt:
+        name: awscli
+        state: present
+
+    - name: Install helm
+      apt:
+        name: helm
+        state: present
+
+    - name: Install eksctl
+      shell: |
+        sudo apt-get update && \
+        sudo apt-get install -y apt-transport-https && \
+        sudo curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | sudo tar xz -C /usr/local/bin
+
+    - name: Install flux
+      shell: |
+        curl -s https://fluxcd.io/install.sh | sudo bash
