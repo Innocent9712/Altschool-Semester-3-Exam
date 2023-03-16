@@ -15,7 +15,7 @@
 - cd into the **ansible** directory and run `ansible-playbook main.yml`. This would install all the required software on your host machine.
 
 
-- make sure a user profile is set on your machine using ""aws cli**, this user should have the following permissions:
+- make sure a user profile is set on your machine using **aws cli**, this user should have the following permissions:
 
     - AmazonEC2FullAccess
     - AmazonEKSFullAccess
