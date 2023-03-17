@@ -110,10 +110,10 @@ Once your deployment is complete, run
 
 you can now visit:
 
-socks.codekami.tech - socks shop
-dunnu.codekami.tech - dunnu
-prometheus.codekami.tech - prometheus monitoring
-grafana.codekami.tech - grafana monitoring (login - username: admin, password: admin)
+- [socks.codekami.tech](https://socks.codekami.tech) - socks shop
+- [dunnu.codekami.tech](https://dunnu.codekami.tech) - dunnu
+- [prometheus.codekami.tech](https://prometheus.codekami.tech) - prometheus monitoring
+- [grafana.codekami.tech](https://grafana.codekami.tech) - grafana monitoring (login - username: admin, password: admin)
 
 
 Once you're done, run `kubectl get pods -A` and you should get something like this:
