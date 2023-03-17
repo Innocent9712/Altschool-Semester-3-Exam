@@ -4,8 +4,8 @@
 
 
 ### Prerequisites: 
-- make sure ansible is installed and your host machine should be a linux machine, idealy an ubuntu machine.
-- github PAT
+- make sure ansible is installed and your host machine should be a linux machine, ideally an ubuntu machine.
+- github PAT should also be created for your github account with all repository permissions.
 
 
 ### Steps:
@@ -28,13 +28,15 @@
     - AmazonVPCFullAccess
     - AmazonElastic
 
-#### Optional - only if you have multiple user profile setup on your machine
-run this command to make sure your user profile is set as the user for your shell environment:
-```shell
-$   export AWS_PROFILE=<user name>
-```
+> #### Optional - only if you have multiple user profile setup on your machine
+> run this command to make sure your user profile is set as the user for your shell environment:
+> ```shell
+> export AWS_PROFILE=<user name>
+> ```
+>
+> - cd into  **terraform** directory. checkout the **terraform.tfvars** file and set the "profile"  to your "aws username".
 
-- cd into  **terraform** directory. checkout the **terraform.tfvars** file and set the "profile" and "AWS_REGION" values to your "aws username" and preferred "region" respectively.
+- in the same **terraform.tfvars** file change the "AWS_REGION" value to your preferred region.
 
 - run `terraform init` then `terraform apply -auto-approve` to setup the infrastructure.
 
@@ -78,7 +80,7 @@ run flux bootstrap for the flux repo using
 flux bootstrap github \
 --components-extra=image-reflector-controller,image-automation-controller \
 --owner=$GITHUB_USER \
---repository=\<repo name> \
+--repository=<repo name> \
 --branch=master \
 --path=./clusters/my-cluster \
 --personal
