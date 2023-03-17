@@ -1,4 +1,4 @@
-## A Full CI/CD Deployment to a kubernetes cluster using flux and helm as a GitOps approach
+## A Full CI/CD Deployment to a kubernetes cluster using flux and helm as a GitOps approach with app image being built and pushed to Docker Hub using Github Actions, providing a Full CI/CD Pipeline
 ---
 
 
@@ -121,6 +121,9 @@ Once you're done, run `kubectl get pods -A` and you should get something like th
 
 
 <br>
+<br>
+
+The Image build and versioned updates for the  [**dunnu app**](https://github.com/Innocent9712/deploy-dunnu) is automated using github actions.
 <br>
 
 To destroy your infrastructure, you first have to manually destroy your alb from your aws console or using aws cli, along with 2 security groups that were created while bringing up the infrastructure. Then proceed to run `terraform destroy` in the **terraform** directory, and respond `yes` to the prompt. All you resources should be destroyed in a few minutes.
